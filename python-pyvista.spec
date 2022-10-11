@@ -1,4 +1,4 @@
-%global module	pyacvd
+%global module	pyvista
 %global fname %(m=%{module}; echo ${m:0:1})
 
 Summary:	A Python  3D plotting and mesh analysis library
@@ -23,7 +23,7 @@ BuildArch:	noarch
 %license LICENSE
 %doc README.rst
 %{py_sitedir}/%{module}/
-%{py_sitedir}/%{module}-%{version}-py%{python_version}.egg-info/
+%{py_platsitedir}/%{module}-%{version}.dist-info/
 
 #----------------------------------------------------------------------------
 
@@ -52,7 +52,7 @@ and J. M. Chassery in ACVD.
 %autosetup -n %{module}-%{version}
 
 #FIXME: omlx python-vtk doesn't provide python3dist(vtk)
-sed -i -e "/  'vtk',/d" setup.py
+#sed -i -e "/  'vtk',/d" setup.py
 
 %build
 %py_build
