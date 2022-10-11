@@ -19,14 +19,6 @@ Requires:	python-vtk
 
 BuildArch:	noarch
 
-%files
-%license LICENSE
-%doc README.rst
-%{py_sitedir}/%{module}/
-%{py_platsitedir}/%{module}-%{version}.dist-info/
-
-#----------------------------------------------------------------------------
-
 %description
 PyVista is:
   - Pythonic VTK: a high-level API to the Visualization Toolkit (VTK)
@@ -47,6 +39,14 @@ Python modules.
 This module takes a surface mesh and returns a uniformly meshed surface using
 voronoi clustering. This approach is loosely based on research by S. Valette,
 and J. M. Chassery in ACVD.
+
+%files
+%license LICENSE
+%doc README.rst
+%{py_sitedir}/%{module}/
+%{py_sitedir}/%{module}-%{version}.dist-info/
+
+#----------------------------------------------------------------------------
 
 %prep
 %autosetup -n %{module}-%{version}
