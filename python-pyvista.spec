@@ -8,8 +8,8 @@ Release:	1
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/pyvista/pyvista
-Source0:	https://github.com/pyvista/%{module}/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
-#Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
+#Source0:	https://github.com/pyvista/%{module}/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(setuptools)
