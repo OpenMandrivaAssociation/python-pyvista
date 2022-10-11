@@ -1,16 +1,19 @@
-%define module	pyvista
+%global module	pyacvd
+%global fname %(m=%{module}; echo ${m:0:1})
 
 Summary:	A Python  3D plotting and mesh analysis library
 Name:		python-%{module}
-Version:	0.33.2
+Version:	0.36.1
 Release:	1
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/pyvista/pyvista
-Source0:	https://pypi.io/packages/source/p/%{module}/%{module}-%{version}.tar.gz
-
+Source0:	https://github.com/pyvista/%{module}/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+#Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(wheel)
 
 Requires:	python-vtk
 
