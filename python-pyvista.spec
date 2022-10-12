@@ -52,7 +52,7 @@ and J. M. Chassery in ACVD.
 %autosetup -n %{module}-%{version}
 
 #FIXME: omlx python-vtk doesn't provide python3dist(vtk)
-#sed -i -e "/  'vtk',/d" setup.py
+sed -i -e "/  'vtk',/d" setup.py
 
 %build
 %py_build
