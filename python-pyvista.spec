@@ -3,7 +3,7 @@
 
 Summary:	A Python  3D plotting and mesh analysis library
 Name:		python-%{module}
-Version:	0.36.1
+Version:	0.37.0
 Release:	1
 Group:		Development/Python
 License:	MIT
