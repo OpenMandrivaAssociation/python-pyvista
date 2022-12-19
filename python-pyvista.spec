@@ -1,15 +1,12 @@
-%global module	pyvista
-%global fname %(m=%{module}; echo ${m:0:1})
-
-Summary:	A Python  3D plotting and mesh analysis library
-Name:		python-%{module}
+Summary:	A Python 3D plotting and mesh analysis library
+Name:		python-pyvista
 Version:	0.37.0
 Release:	1
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/pyvista/pyvista
-#Source0:	https://github.com/pyvista/%{module}/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
+#Source0:	https://github.com/pyvista/pyvista/archive/refs/tags/v%{version}/pyvista-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/p/pyvista/pyvista-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(setuptools)
@@ -43,13 +40,13 @@ and J. M. Chassery in ACVD.
 %files
 %license LICENSE
 %doc README.rst
-%{py_sitedir}/%{module}/
-%{py_sitedir}/%{module}-%{version}.dist-info/
+%{py_sitedir}/pyvista/
+%{py_sitedir}/pyvista*-info/
 
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -n %{module}-%{version}
+%autosetup -n pyvista-%{version}
 
 #FIXME: omlx python-vtk doesn't provide python3dist(vtk)
 sed -i -e "/  'vtk',/d" setup.py
