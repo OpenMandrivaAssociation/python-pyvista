@@ -8,9 +8,9 @@ URL:		https://github.com/pyvista/pyvista
 #Source0:	https://github.com/pyvista/pyvista/archive/refs/tags/v%{version}/pyvista-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/p/pyvista/pyvista-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
+BuildRequires:	python%{pyver}(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 Requires:	python-vtk
 
