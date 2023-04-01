@@ -1,6 +1,6 @@
 Summary:	A Python 3D plotting and mesh analysis library
 Name:		python-pyvista
-Version:	0.38.4
+Version:	0.38.5
 Release:	1
 Group:		Development/Python
 License:	MIT
@@ -8,10 +8,10 @@ URL:		https://github.com/pyvista/pyvista
 #Source0:	https://github.com/pyvista/pyvista/archive/refs/tags/v%{version}/pyvista-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/p/pyvista/pyvista-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(poetry-core)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
+BuildRequires:	python%{py_ver}dist(pip)
+BuildRequires:	python%{py_ver}dist(poetry-core)
+BuildRequires:	python%{py_ver}dist(setuptools)
+BuildRequires:	python%{py_ver}dist(wheel)
 
 Requires:	python-vtk
 
