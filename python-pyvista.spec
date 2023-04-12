@@ -13,6 +13,8 @@ BuildRequires:	python%{py_ver}dist(poetry-core)
 BuildRequires:	python%{py_ver}dist(setuptools)
 BuildRequires:	python%{py_ver}dist(wheel)
 
+# (mandian) python-vtk does not provide python%{py_ver}dist(vtk)
+%global __requires_exclude  ^python%{py_ver}dist(vtk)
 Requires:	python-vtk
 
 BuildArch:	noarch
