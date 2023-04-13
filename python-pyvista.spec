@@ -8,13 +8,13 @@ URL:		https://github.com/pyvista/pyvista
 #Source0:	https://github.com/pyvista/pyvista/archive/refs/tags/v%{version}/pyvista-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/p/pyvista/pyvista-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python%{py_ver}dist(pip)
-BuildRequires:	python%{py_ver}dist(poetry-core)
-BuildRequires:	python%{py_ver}dist(setuptools)
-BuildRequires:	python%{py_ver}dist(wheel)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(poetry-core)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 # (mandian) python-vtk does not provide python%{py_ver}dist(vtk)
-%global __requires_exclude  ^python%{py_ver}dist(vtk)
+%global __requires_exclude  ^python%{pyver}dist\\(vtk\\)$
 Requires:	python-vtk
 
 BuildArch:	noarch
