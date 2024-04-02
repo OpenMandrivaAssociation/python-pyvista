@@ -1,7 +1,7 @@
 Summary:	A Python 3D plotting and mesh analysis library
 Name:		python-pyvista
 Version:	0.43.3
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/pyvista/pyvista
