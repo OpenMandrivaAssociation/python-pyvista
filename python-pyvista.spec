@@ -1,7 +1,7 @@
 Summary:	A Python 3D plotting and mesh analysis library
 Name:		python-pyvista
-Version:	0.44.2
-Release:	3
+Version:	0.48.4
+Release:	1
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/pyvista/pyvista
@@ -49,7 +49,7 @@ and J. M. Chassery in ACVD.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -n pyvista-%{version}
+%autosetup -n pyvista-0.48.4
 
 #FIXME: omlx python-vtk doesn't provide python3dist(vtk)
 sed -i -e "/  'vtk',/d" setup.py
